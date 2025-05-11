@@ -4,5 +4,5 @@
 2. [💻 Entorno de Trabajo](#1---entorno-de-trabajo)
 
 
-#1.- 📂 Descripción y estructura del proyecto
+## 1.- 📂 Descripción y estructura del proyecto
 
