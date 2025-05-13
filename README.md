@@ -5,7 +5,7 @@
 3. [🔍 Análisis Exploratorio de Datos (EDA)](#3---análisis-exploratorio-de-datos-eda)
 4. [⚙️ Preprocesamiento](#4--️-preprocesamiento)
 5. [🤖 Implementación de Modelos](#5---implementación-de-modelos)
-   1. [🛠️ Implementación de K means](#52--️-implementación-de-k-means)
+   1. [🛠️ Implementación de K means](#51--️-implementación-de-k-means)
    2. [🛠️ Implementación de DBSCAN](#52--️-implementación-de-dbscan)
 6. []
 
