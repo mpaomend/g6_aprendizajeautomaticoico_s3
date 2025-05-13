@@ -63,12 +63,19 @@ El dataset contiene las siguientes variable o columnas
 *   **Tasa de Clics o CTR (Click-Through Rate)** =  (Clics / Impr.)
 *   Un CTR alto → el anuncio o enlace es relevante y atractivo para los usuarios.
 *   Un CTR bajo → podría indicar que el contenido no está llamando la atención o no está bien dirigido al público adecuado.
-*   **Costo Total** =  Clicks * Avg. CPC
+*   **Costo Total** =  Clicks * Avg. CPC , Aunque no resulta útil para nuestro análisis, es un valor que puede calcularse.
 
 ## 4.- [⚙️ Preprocesamiento](#3--️-preprocesamiento)
 
-Preprocesamiento
-Aplicar escalamiento logarítmico o normalización para visualizar mejor las relaciones.
+Para la Limpieza y Preprocesamiento de datos se realizó lo siguiente:
 
+- Se eliminó la columna Currency code del DATASET_NAMES
 
+- Se eliminó Duplicados si existieran
+
+- Se eliminan filas con valores nulos en las columnas importantes
+
+- Se agregó la Columna CTR (Tasa de Clics) = Clicks/ Impr.
+
+Esto dió como resultado un nuevo dataset preprocesado que se encuentra en dataset/dataset_procesado.csv [Ver](dataset/dataset_procesado.csv)
 
