@@ -5,7 +5,8 @@
 3. [🔍 Análisis Exploratorio de Datos (EDA)](#3---análisis-exploratorio-de-datos-eda)
 4. [⚙️ Preprocesamiento](#4--️-preprocesamiento)
 5. [🤖 Implementación de Modelos](#5---implementación-de-modelos)
-
+  1. [🛠️ Implementación de K-means](#51---implementación-de-K-means)
+  2. [🛠️ Implementación de DBSCAN](#52---implementación-de-dbscan)
 
 ## 1.- 📂 Descripción del proyecto
 El equipo de Marketing está preparando una campaña publicitaria para productos relacionados con la inteligencia artificial y nos ha solicitado que les proporcionemos palabras clave que optimicen sus búsquedas en Google.
@@ -122,7 +123,7 @@ Al fijarnos en los Términos de búsqueda en lugar de los keywords podemos encon
 > Una keyword configurada podría ser `inteligencia artificial`,  
 > pero el término de búsqueda real podría ser `cómo usar inteligencia artificial en el aula`.
 
-### 5.1.- 🤖 Implementación de K-means
+### 5.1.- 🛠️ Implementación de K-means
 
-### 5.2.- 🤖 Implementación de DBSCAN
+### 5.2.- 🛠️ Implementación de DBSCAN
 
