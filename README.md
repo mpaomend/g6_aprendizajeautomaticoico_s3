@@ -5,8 +5,8 @@
 3. [🔍 Análisis Exploratorio de Datos (EDA)](#3---análisis-exploratorio-de-datos-eda)
 4. [⚙️ Preprocesamiento](#4--️-preprocesamiento)
 5. [🤖 Implementación de Modelos](#5---implementación-de-modelos)
-  1. [🛠️ Implementación de K-means](#51---implementación-de-K-means)
-  2. [🛠️ Implementación de DBSCAN](#52---implementación-de-dbscan)
+  1. [🛠️ Implementación de K-means](#51---implementación-de-k-means)
+  2. [🛠️ Implementación de DBSCAN](#52--️-implementación-de-dbscan)
 
 ## 1.- 📂 Descripción del proyecto
 El equipo de Marketing está preparando una campaña publicitaria para productos relacionados con la inteligencia artificial y nos ha solicitado que les proporcionemos palabras clave que optimicen sus búsquedas en Google.
