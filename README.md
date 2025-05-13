@@ -34,9 +34,11 @@ El dataset contiene las siguientes variable o columnas
 | Keyword           | Texto        | Categórica nominal          | Palabra clave objetivo que activó el anuncio.                               | Permite analizar relación entre keyword y término de búsqueda, y optimizar campañas. |
 
 
-### Análisis de distribuciones individuales
+### 🟦 Análisis de distribuciones individuales
 ![Gráfico de resultados](imagenes/analisisdistribuciones.png)
-<img src="imagenes/analisisdistribuciones.png" alt="Análisis distribuciones individuales" style="border: 2px solid #ccc;">
+
+### 🟦 Boxplot y Matriz de Correlación
+![Gráfico de resultados](imagenes/boxplotimpr.png)
 
 ### Después de realizar el análisis individual de cada variable, se obtuvieron las siguientes conclusiones:
 
