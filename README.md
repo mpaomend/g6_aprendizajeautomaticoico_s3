@@ -126,7 +126,34 @@ Al fijarnos en los Términos de búsqueda en lugar de los keywords podemos encon
 
 ### 5.1.- 🛠️ Implementación de K means
 
+Todo lo realizado en esta sección se encuentra en el archivo: <a href="https://github.com/ancantos99/g6_aprendizajeautomaticoico_s3/blob/main/colab/g6_aprendizajeautomaticoico_s3_KMEANS.ipynb" target="_blank">colab/g6_aprendizajeautomaticoico_s3_KMEANS.ipynb</a>
 
+#### Elección de K
+
+<p align="center">
+<img src="imagenes/kmeanscodo.png" width="400">
+</p>
+Aunque el método del codo sugiere que k=4 es una buena opción, al entrenar el modelo con k=5 se obtuvo una segmentación más detallada. 
+
+En ambos casos aparece un cluster con un solo elemento (posible outlier), pero con k=5 los demás clusters están mejor definidos, por esta razón se decidió entrenar el modelo con K = 5 obteniendo los siguiente resultados:
+
+#### Resultados por Cluster (K=5)
+
+| Cluster | Impresiones | Clicks  | CostoxClick | TasaClicks |  Cantidad de elementos |
+|---------|-------------|---------|-------------|------------|------------------------|
+| 0       | 1.92        | 0.03    | 0.0027      | 0.0039     |        13084           |
+| 1       | 13.87       | 1.80    | 0.4804      | 0.3669     |         535            |
+| 2       | 2060.00     | 47.00   | 0.1000      | 0.0228     |          1             |
+| 3       | 1.31        | 1.09    | 0.2238      | 0.9132     |         763            |
+| 4       | 200.11      | 18.11   | 0.2795      | 0.1321     |          19            |
+
+**Interpretación**
+
+- **CLUSTER 1:** Tiemen mayor Costo Promedio por Click (PALABRAS MÁS CARAS)
+- **CLUSTER 2:** Tiene más impresiones y Clicks, pero solo contiene un elemento por eso lo descarto.
+- **CLUSTER 3:** Tiente más tasa de clicks promedio 91% (CONTIENE PALABRAS O FRASES QUE GENERAN ALTA EFICIENCIA)
+- **CLUSTER 4:** Descartando al 2, este es el que tiene más impresiones y Clicks (CONTIENE PALABRAS O FRASES QUE GENERAN ALTA VISIBILIDAD)
+- **CLUSTER 0:** Tiene muy pocas impresiones y casi sin clicks, este contiene la mayor cantidad de palabras, podríamos asumir que contiene palabras o frases irrelevantes 
 
 ### 5.2.- 🛠️ Implementación de DBSCAN
 
