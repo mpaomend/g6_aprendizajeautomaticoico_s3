@@ -1,4 +1,4 @@
-# Aprendizaje No Supervisado
+# Aprendizaje No Supervisado 
 ## 📑 Índice
 1. [📂 Descripción y Estructura del Proyecto](#1---descripción-y-estructura-del-proyecto)
 2. [💻 Entorno de Trabajo](#2---entorno-de-trabajo)
@@ -6,10 +6,10 @@
 
 
 ## 1.- 📂 Descripción y estructura del proyecto
-El equipo de Marketing va a realizar una campaña publicitaria para productos que involucran IA, y nos pidieron que les facilitaramos palabras que mejoren sus búsquedas en Google.
+El equipo de Marketing está preparando una campaña publicitaria para productos relacionados con la inteligencia artificial y nos ha solicitado que les proporcionemos palabras clave que optimicen sus búsquedas en Google.
 
 Para esto hemos utilizado el dataset: https://www.kaggle.com/datasets/devraai/ai-google-search-keyword-performance
-proporciona información sobre el rendimiento de palabras clave relacionadas con la inteligencia artificial en las búsquedas de Google. Este dataset es útil para analizar tendencias de búsqueda y evaluar la popularidad de términos específicos en el ámbito de la IA.
+Este dataset nos proporciona información sobre el rendimiento de palabras clave relacionadas con la inteligencia artificial en las búsquedas de Google. Este dataset es útil para analizar tendencias de búsqueda y evaluar la popularidad de términos específicos en el ámbito de la IA.
 
 ### Objetivo General
 Agrupar términos de búsqueda (Search terms) en clusters según su rendimiento publicitario, para ayudar al equipo de marketing a:
@@ -32,3 +32,25 @@ El dataset contiene las siguientes variable o columnas
 | Currency code     | Texto        | Categórica nominal          | Código de la moneda usada en los reportes (e.g., USD, EUR).                 | No sirve para nuestro análisis, se excluirá                              |
 | Avg. CPC          | Numérico     | Cuantitativa continua       | Costo promedio por clic generado por el término de búsqueda.                | Mide eficiencia de inversión publicitaria.                               |
 | Keyword           | Texto        | Categórica nominal          | Palabra clave objetivo que activó el anuncio.                               | Permite analizar relación entre keyword y término de búsqueda, y optimizar campañas. |
+
+
+### Análisis de distribuciones individuales
+![Gráfico de resultados](imagenes/analisisdistribuciones.png)
+<img src="imagenes/analisisdistribuciones.png" alt="Análisis distribuciones individuales" style="border: 2px solid #ccc;">
+
+### Después de realizar el análisis individual de cada variable, se obtuvieron las siguientes conclusiones:
+
+**1.   Alta concentración de datos en valores bajos**
+*   La mayoría de los términos tienen bajo impacto (pocas impresiones, clics y bajo CPC)
+*   Elemento de la lista
+
+**2.   Pocos términos dominan la distribución**
+*   Probablemente, unas pocas palabras clave son muy efectivas
+
+**2.   Tendencia general (Impr. vs Clicks)**
+*   Existe cierta correlación positiva
+*   Se podría Calcular la Tasa de Clics o CTR (Click-Through Rate) =  (Clics / Impr.)
+*   Un CTR alto → el anuncio o enlace es relevante y atractivo para los usuarios.
+*   Un CTR bajo → podría indicar que el contenido no está llamando la atención o no está bien dirigido al público adecuado.
+
+
