@@ -39,18 +39,23 @@ El dataset contiene las siguientes variable o columnas
 
 ### 🟦 Boxplot y Matriz de Correlación
 ![Gráfico de resultados](imagenes/boxplotimpr.png)
+<p align="center">
+<img src="imagenes/matrizcorrelacion.png" width="500">
+</p>
+
+### 🟦 Distribución de la variable no categórica Match Type
+![Gráfico de resultados](imagenes/distribucionmatchtype.png)
 
 ### Después de realizar el análisis individual de cada variable, se obtuvieron las siguientes conclusiones:
 
 **1.   Alta concentración de datos en valores bajos**
 *   La mayoría de los términos tienen bajo impacto (pocas impresiones, clics y bajo CPC)
-*   Elemento de la lista
-
+  
 **2.   Pocos términos dominan la distribución**
 *   Probablemente, unas pocas palabras clave son muy efectivas
 
 **2.   Tendencia general (Impr. vs Clicks)**
-*   Existe cierta correlación positiva
+*   Las dos variables presentan una correlación positiva, esto se respalda por la matriz de correlación, en la que se reporta un coeficiente de 0.69.
 *   Se podría Calcular la Tasa de Clics o CTR (Click-Through Rate) =  (Clics / Impr.)
 *   Un CTR alto → el anuncio o enlace es relevante y atractivo para los usuarios.
 *   Un CTR bajo → podría indicar que el contenido no está llamando la atención o no está bien dirigido al público adecuado.
