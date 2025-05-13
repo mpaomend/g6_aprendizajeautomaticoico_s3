@@ -77,5 +77,13 @@ Para la Limpieza y Preprocesamiento de datos se realizó lo siguiente:
 
 - Se agregó la Columna CTR (Tasa de Clics) = Clicks/ Impr.
 
-Esto dió como resultado un nuevo dataset preprocesado que se encuentra en <a href="https://github.com/ancantos99/g6_aprendizajeautomaticoico_s3/tree/main/dataset" target="_blank">dataset/dataset_procesado.csv</a>
+Esto dió como resultado un nuevo dataset preprocesado que se encuentra en: <a href="https://github.com/ancantos99/g6_aprendizajeautomaticoico_s3/tree/main/dataset/dataset_procesado.csv" target="_blank">dataset/dataset_procesado.csv</a>
+
+Para terminar el preprocesamiento con el nuevo dataset realizo la normalización de los datos para las variables cuantitativas
+
+```python
+columnas = ['Impr.', 'Clicks', 'Avg. CPC', 'CTR']
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(df[columnas])
+```
 
