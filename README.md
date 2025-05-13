@@ -77,6 +77,5 @@ Para la Limpieza y Preprocesamiento de datos se realizó lo siguiente:
 
 - Se agregó la Columna CTR (Tasa de Clics) = Clicks/ Impr.
 
-Esto dió como resultado un nuevo dataset preprocesado que se encuentra en dataset/dataset_procesado.csv 
-<a href="https://github.com/ancantos99/g6_aprendizajeautomaticoico_s3/tree/main/dataset" target="_blank">dataset/dataset_procesado.csv</a>
+Esto dió como resultado un nuevo dataset preprocesado que se encuentra en <a href="https://github.com/ancantos99/g6_aprendizajeautomaticoico_s3/tree/main/dataset" target="_blank">dataset/dataset_procesado.csv</a>
 
