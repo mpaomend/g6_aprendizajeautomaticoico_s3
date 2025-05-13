@@ -67,3 +67,8 @@ El dataset contiene las siguientes variable o columnas
 
 ## 4.- [⚙️ Preprocesamiento](#3--️-preprocesamiento)
 
+Preprocesamiento
+Aplicar escalamiento logarítmico o normalización para visualizar mejor las relaciones.
+
+
+
