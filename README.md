@@ -65,5 +65,5 @@ El dataset contiene las siguientes variable o columnas
 *   Un CTR bajo → podría indicar que el contenido no está llamando la atención o no está bien dirigido al público adecuado.
 *   **Costo Total** =  Clicks * Avg. CPC
 
-4. [⚙️ Preprocesamiento](#3--️-preprocesamiento)
+## 4.- [⚙️ Preprocesamiento](#3--️-preprocesamiento)
 
