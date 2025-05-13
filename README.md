@@ -4,6 +4,7 @@
 2. [💻 Entorno de Trabajo](#2---entorno-de-trabajo-y-librerías-utilizadas)
 3. [🔍 Análisis Exploratorio de Datos (EDA)](#3---análisis-exploratorio-de-datos-eda)
 4. [⚙️ Preprocesamiento](#4--️-preprocesamiento)
+5. [🤖 Implementación de Modelos](#5---implementación-de-modelos)
 
 
 ## 1.- 📂 Descripción del proyecto
@@ -77,7 +78,9 @@ Todo lo realizado en esta sección se encuentra en el archivo: <a href="https://
 *   Un CTR bajo → podría indicar que el contenido no está llamando la atención o no está bien dirigido al público adecuado.
 *   **Costo Total** =  Clicks * Avg. CPC , Aunque no resulta útil para nuestro análisis, es un valor que puede calcularse.
 
-## 4.- [⚙️ Preprocesamiento](#3--️-preprocesamiento)
+  
+## 4.- ⚙️ Preprocesamiento
+
 
 Para la Limpieza y Preprocesamiento de datos se realizó lo siguiente:
 
@@ -89,13 +92,37 @@ Para la Limpieza y Preprocesamiento de datos se realizó lo siguiente:
 
 - Se agregó la Columna CTR (Tasa de Clics) = Clicks/ Impr.
 
+- Renombrar Nombre de Columnas para mejor comprensión: Search term -> TerminoBusqueda, Impr. -> Impresiones, CTR -> TasaClicks, Avg. CPC->CostoxClick
+
 Esto dió como resultado un nuevo dataset preprocesado que se encuentra en: <a href="https://github.com/ancantos99/g6_aprendizajeautomaticoico_s3/tree/main/dataset/dataset_procesado.csv" target="_blank">dataset/dataset_procesado.csv</a>
 
-Para terminar el preprocesamiento con el nuevo dataset realizo la normalización de los datos para las variables cuantitativas
+Para terminar el preprocesamiento, con el nuevo dataset se realizo la normalización de los datos para las variables cuantitativas.
+
+Este paso es fundamental, ya que observamos que la distribución de las variables es muy dispersa. Por ejemplo, la variable Impr. presenta una desviación estándar de 20.9, lo que indica una alta variabilidad.
 
 ```python
 columnas = ['Impr.', 'Clicks', 'Avg. CPC', 'CTR']
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(df[columnas])
 ```
+Con esto, los datos quedarán preparados para ser utilizados en los modelos de clustering K-Means y DBSCAN.
+
+
+## 5.- 🤖 Implementación de Modelos
+
+Se aplicarán los modelos sobre los términos de búsqueda y no sobre los keywords, El objetivo es agrupar los términos según su comportamiento en Clicks, Impresiones, Tasa de Clicks y Costo promedio por Click
+
+**¿Por qué analizamos los Términos de Búsqueda?**
+
+En el dataset, los términos de búsqueda muestran cómo los usuarios piensan o formulan sus necesidades relacionadas con IA en los buscadores, mientras que las Keywords son palabras seleccionadas para activar el anuncio.
+
+Al fijarnos en los Términos de búsqueda en lugar de los keywords podemos encontrar nuevos términos que sean más precisos y reales, por ejemplo:
+
+> **Ejemplo:**  
+> Una keyword configurada podría ser `inteligencia artificial`,  
+> pero el término de búsqueda real podría ser `cómo usar inteligencia artificial en el aula`.
+
+### 5.1.- 🤖 Implementación de K-means
+
+### 5.2.- 🤖 Implementación de DBSCAN
 
