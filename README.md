@@ -1,7 +1,7 @@
 # Aprendizaje No Supervisado 
 ## 📑 Índice
 1. [📂 Descripción y Estructura del Proyecto](#1---descripción-y-estructura-del-proyecto)
-2. [💻 Entorno de Trabajo](#2---entorno-de-trabajo)
+2. [💻 Entorno de Trabajo](#2---entorno-de-trabajo-y-librerías-utilizadas)
 3. [🔍 Análisis Exploratorio de Datos (EDA)](#3---análisis-exploratorio-de-datos-eda)
 4. [⚙️ Preprocesamiento](#4--️-preprocesamiento)
 
@@ -13,14 +13,25 @@ Para esto hemos utilizado el dataset: https://www.kaggle.com/datasets/devraai/ai
 
 Este dataset nos proporciona información sobre el rendimiento de palabras clave relacionadas con la inteligencia artificial en las búsquedas de Google. Este dataset es útil para analizar tendencias de búsqueda y evaluar la popularidad de términos específicos en el ámbito de la IA.
 
-### Objetivo General
+#### Objetivo General
 Agrupar términos de búsqueda (Search terms) en clusters según su rendimiento publicitario, para ayudar al equipo de marketing a:
 - Detectar segmenos de alto rendimiento
 - Identificar términos costosos
 - Optimizar la asignación de presupuesto
 
-## 2.- 💻 Entorno de Trabajo
-Nombrar herramientas y librerías.
+## 2.- 💻 Entorno de Trabajo y librerías utilizadas
+
+Este proyecto fue desarrollado con Python en Google Colab
+
+**Librerías utilizadas**
+
+- **pandas**: para la carga, exploración y manipulación estructurada de los datos.
+- **numpy**: soporte para operaciones matemáticas y manejo eficiente de arreglos numéricos.
+- **matplotlib.pyplot** y **seaborn**: utilizadas para la visualización de datos mediante gráficos como histogramas, diagramas de dispersión y mapas de calor.
+- **scikit-learn (sklearn)**: para el preprocesamiento de datos, reducción de dimensionalidad y aplicación de algoritmos de aprendizaje no supervisado:
+  - `StandardScaler`: normaliza los datos para que todas las variables tengan igual importancia en los cálculos de distancia.
+  - `KMeans` y `DBSCAN`: algoritmos de *clustering* utilizados para identificar patrones o grupos similares en el dataset.
+  - `PCA (Principal Component Analysis)` y `t-SNE (t-distributed Stochastic Neighbor Embedding)`: técnicas de reducción de dimensionalidad empleadas para visualizar los datos y los resultados del clustering en dos dimensiones.
 
 ## 3.- 🔍 Análisis Exploratorio de Datos (EDA) 
 El dataset contiene las siguientes variable o columnas
@@ -37,16 +48,16 @@ El dataset contiene las siguientes variable o columnas
 
 Todo lo realizado en esta sección se encuentra en el archivo: <a href="https://github.com/ancantos99/g6_aprendizajeautomaticoico_s3/blob/main/colab/g6_aprendizajeautomaticoico_s3_exploraciondatos.ipynb" target="_blank">colab/g6_aprendizajeautomaticoico_s3_exploraciondatos.ipynb</a>
 
-### 🟦 Análisis de distribuciones individuales
+#### 🟦 Análisis de distribuciones individuales
 ![Gráfico de resultados](imagenes/analisisdistribuciones.png)
 
-### 🟦 Boxplot y Matriz de Correlación
+#### 🟦 Boxplot y Matriz de Correlación
 ![Gráfico de resultados](imagenes/boxplotimpr.png)
 <p align="center">
 <img src="imagenes/matrizcorrelacion.png" width="500">
 </p>
 
-### 🟦 Distribución de la variable no categórica Match Type
+#### 🟦 Distribución de la variable no categórica Match Type
 ![Gráfico de resultados](imagenes/distribucionmatchtype.png)
 
 ### Después de realizar el análisis individual de cada variable, se obtuvieron las siguientes conclusiones:
