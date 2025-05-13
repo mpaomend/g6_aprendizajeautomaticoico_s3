@@ -3,6 +3,7 @@
 1. [📂 Descripción y Estructura del Proyecto](#1---descripción-y-estructura-del-proyecto)
 2. [💻 Entorno de Trabajo](#2---entorno-de-trabajo)
 3. [🔍 Análisis Exploratorio de Datos (EDA)](#3---análisis-exploratorio-de-datos-eda)
+4. [⚙️ Preprocesamiento](#4--️-preprocesamiento)
 
 
 ## 1.- 📂 Descripción del proyecto
@@ -49,16 +50,20 @@ El dataset contiene las siguientes variable o columnas
 
 ### Después de realizar el análisis individual de cada variable, se obtuvieron las siguientes conclusiones:
 
-**1.   Alta concentración de datos en valores bajos**
+**1. Alta concentración de datos en valores bajos**
 *   La mayoría de los términos tienen bajo impacto (pocas impresiones, clics y bajo CPC)
   
-**2.   Pocos términos dominan la distribución**
+**2. Pocos términos dominan la distribución**
 *   Probablemente, unas pocas palabras clave son muy efectivas
 
-**2.   Tendencia general (Impr. vs Clicks)**
+**2. Tendencia general (Impr. vs Clicks)**
 *   Las dos variables presentan una correlación positiva, esto se respalda por la matriz de correlación, en la que se reporta un coeficiente de 0.69.
-*   Se podría Calcular la Tasa de Clics o CTR (Click-Through Rate) =  (Clics / Impr.)
+
+**3. Se puede calcular valores adicionales como:**
+*   **Tasa de Clics o CTR (Click-Through Rate)** =  (Clics / Impr.)
 *   Un CTR alto → el anuncio o enlace es relevante y atractivo para los usuarios.
 *   Un CTR bajo → podría indicar que el contenido no está llamando la atención o no está bien dirigido al público adecuado.
+*   **Costo Total** =  Clicks * Avg. CPC
 
+4. [⚙️ Preprocesamiento](#3--️-preprocesamiento)
 
