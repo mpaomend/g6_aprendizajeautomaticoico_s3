@@ -156,5 +156,18 @@ En ambos casos aparece un cluster con un solo elemento (posible outlier), pero c
 - **CLUSTER 4:** Descartando al 2, este es el que tiene más impresiones y Clicks (CONTIENE PALABRAS O FRASES QUE GENERAN ALTA VISIBILIDAD)
 
 
+#### Visualización en 2D de los Cluster usando PCA
+
+Con el fin de mejorar la visualización del gráfico, se excluyó el Cluster 2, ya que representa un outlier que afecta la escala
+
+<p align="center">
+<img src="imagenes/kmeanspca2d.png" width="500">
+</p>
+
+- El Cluster 4 (rosado) se encuentra bastante aislado, lo que indica que sus características son únicas.
+-  
+
+
+
 ### 5.2.- 🛠️ Implementación de DBSCAN
 
