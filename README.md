@@ -176,7 +176,52 @@ Se utilizó perplexity=30 y learning_rate=200
 
 - PCA muestra el Clúster 4 (Rosado en PCA) relativamente aislado en la parte superior lo que sugiere que tiene características bastantes distintas al resto de datos
 - A primera vista se observa que t-SNE logra “estirar” y separar los datos en el plano 2D de una forma que facilita la interpretación visual.
-- En ambos gráficos, pero mucho más en el t-SNE se observa una separación clara de los clústeres
+- En ambos gráficos, pero mucho más en el t-SNE se observa una separación clara de los clústeres, en el gráfico PCA los clústers 0,1,3 se superponen un poco
+- en nuestro caso es más útil el gráfico t-SNE
+-    El CLÚSTER 0 (palabras irrelevantes) se encuentra en varias áreas dispersas, lo que podría indicar que estas palabras no forman un grupo compacto de comportamiento.
+-    El CLÚSTER 1 (palabras caras con tasa de clicks aceptable) parece formar un grupo más definido, aunque con cierta dispersión, lo que podría reflejar la variabilidad en el costo y la tasa de clics dentro de este grupo.
+-    El CLÚSTER 3 (alta eficiencia) se visualiza como un grupo relativamente compacto, lo que sugiere que las palabras clave con alta tasa de clics tienden a compartir características similares en el espacio reducido por t-SNE.
+-    El CLÚSTER 4 (alta visibilidad) también forma un grupo notable, aunque quizás más extenso que el clúster 3, lo que podría indicar una mayor variedad de palabras clave que generan muchas impresiones y clics.
+
+#### TOP 3 DE LOS MEJORES TÉRMINOS DE CADA CLÚSTER ORDENADOS POR TASA DE CLICKS 
+
+**Cluster 0 (PALABRAS O FRASES IRRELEVANTES):**
+
+| TerminoBusqueda                  | Impresiones | Clicks | CostoxClick | TasaClicks |
+|----------------------------------|-------------|--------|-------------|------------|
+| https www decohere ai            | 6           | 2      | 0.1         | 0.333333   |
+| ai game generator                | 7           | 2      | 0.1         | 0.285714   |
+| yapay zeka görsel oluşturma      | 7           | 2      | 0.1         | 0.285714   |
+
+**Cluster 1 (PALABRAS MÁS CARAS PERO CON UNA TASA DE CLICKS ACEPTABLE):**
+
+| TerminoBusqueda                                              | Impresiones | Clicks | CostoxClick | TasaClicks |
+|--------------------------------------------------------------|-------------|--------|-------------|------------|
+| ia que cria imagens de graça                                 | 7           | 5      | 0.38        | 0.714286   |
+| app de inteligência artificial gratuito                      | 5           | 3      | 0.39        | 0.600000   |
+| openai's musenet                                             | 7           | 4      | 0.53        | 0.571429   |
+
+**Cluster 2 (OUTLIER):**
+
+| TerminoBusqueda | Impresiones | Clicks | CostoxClick | TasaClicks |
+|-----------------|-------------|--------|-------------|------------|
+| copilot         | 2060        | 47     | 0.1         | 0.022816   |
+
+**Cluster 3 (CONTIENE PALABRAS O FRASES QUE GENERAN ALTA EFICIENCIA)**
+
+| TerminoBusqueda                                | Impresiones | Clicks | CostoxClick | TasaClicks |
+|------------------------------------------------|-------------|--------|-------------|------------|
+| doctrina ai exam                               | 9           | 6      | 0.09        | 0.666667   |
+| ia para apresentação de slides                 | 5           | 3      | 0.25        | 0.600000   |
+| ai project maker                               | 5           | 3      | 0.10        | 0.600000   |
+
+**Cluster 4 (CONTIENE PALABRAS O FRASES QUE GENERAN ALTA VISIBILIDAD)**
+
+| TerminoBusqueda                          | Impresiones | Clicks | CostoxClick | TasaClicks |
+|-----------------------------------------|-------------|--------|-------------|------------|
+| ia para programação                     | 80          | 21     | 0.49        | 0.262500   |
+| inteligencia artificial gratis          | 50          | 12     | 0.35        | 0.240000   |
+| ia para criar slides gratuito           | 65          | 15     | 0.32        | 0.230769   |
 
   
 ### 5.2.- 🛠️ Implementación de DBSCAN
