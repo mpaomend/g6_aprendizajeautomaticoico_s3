@@ -177,11 +177,11 @@ Se utilizó perplexity=30 y learning_rate=200
 - PCA muestra el Clúster 4 (Rosado en PCA) relativamente aislado en la parte superior lo que sugiere que tiene características bastantes distintas al resto de datos
 - A primera vista se observa que t-SNE logra “estirar” y separar los datos en el plano 2D de una forma que facilita la interpretación visual.
 - En ambos gráficos, pero mucho más en el t-SNE se observa una separación clara de los clústeres, en el gráfico PCA los clústers 0,1,3 se superponen un poco
-- en nuestro caso es más útil el gráfico t-SNE
--    El CLÚSTER 0 (palabras irrelevantes) se encuentra en varias áreas dispersas, lo que podría indicar que estas palabras no forman un grupo compacto de comportamiento.
--    El CLÚSTER 1 (palabras caras con tasa de clicks aceptable) parece formar un grupo más definido, aunque con cierta dispersión, lo que podría reflejar la variabilidad en el costo y la tasa de clics dentro de este grupo.
--    El CLÚSTER 3 (alta eficiencia) se visualiza como un grupo relativamente compacto, lo que sugiere que las palabras clave con alta tasa de clics tienden a compartir características similares en el espacio reducido por t-SNE.
--    El CLÚSTER 4 (alta visibilidad) también forma un grupo notable, aunque quizás más extenso que el clúster 3, lo que podría indicar una mayor variedad de palabras clave que generan muchas impresiones y clics.
+- en nuestro caso es más útil el gráfico t-SNE para realizar un análisis
+  - El CLÚSTER 0 (palabras irrelevantes) se encuentra en varias áreas dispersas, lo que podría indicar que en este grupo algunas palabras no son útiles pero otras si.
+  - El CLÚSTER 1 (palabras caras con tasa de clicks aceptable) parece formar un grupo más definido, aunque con cierta dispersión, pero esta dispersión sigue compacta, lo que podría reflejar la variabilidad en el costo y la tasa de clics dentro de este grupo.
+  - El CLÚSTER 3 (alta eficiencia) se visualiza como un grupo relativamente compacto, lo que sugiere que las palabras clave con alta tasa de clics tienden a compartir características similares.
+  - El CLÚSTER 4 (alta visibilidad) también forma un grupo compacto, aunque menos extenso que el clúster 3, lo que podría indicar una menor variedad de palabras que generan muchas impresiones y clics.
 
 #### TOP 3 DE LOS MEJORES TÉRMINOS DE CADA CLÚSTER ORDENADOS POR TASA DE CLICKS 
 
