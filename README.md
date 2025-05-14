@@ -17,7 +17,7 @@ Para esto hemos utilizado el dataset: https://www.kaggle.com/datasets/devraai/ai
 Este dataset nos proporciona información sobre el rendimiento de palabras clave relacionadas con la inteligencia artificial en las búsquedas de Google. Este dataset es útil para analizar tendencias de búsqueda y evaluar la popularidad de términos específicos en el ámbito de la IA.
 
 #### Objetivo General
-Agrupar términos de búsqueda (Search terms) en clusters según su rendimiento publicitario, para ayudar al equipo de marketing a:
+Agrupar términos de búsqueda (Search terms) en clústers según su rendimiento publicitario, para ayudar al equipo de marketing a:
 - Detectar segmenos de alto rendimiento
 - Identificar términos costosos
 - Optimizar la asignación de presupuesto
@@ -135,11 +135,11 @@ Todo lo realizado en esta sección se encuentra en el archivo: <a href="https://
 </p>
 Aunque el método del codo sugiere que k=4 es una buena opción, al entrenar el modelo con k=5 se obtuvo una segmentación más detallada. 
 
-En ambos casos aparece un cluster con un solo elemento (posible outlier), pero con k=5 los demás clusters están mejor definidos, por esta razón se decidió entrenar el modelo con K = 5 obteniendo los siguiente resultados:
+En ambos casos aparece un clúster con un solo elemento (posible outlier), pero con k=5 los demás clústers están mejor definidos, por esta razón se decidió entrenar el modelo con K = 5 obteniendo los siguiente resultados:
 
-#### Resultados Promedios por Cluster (K=5)
+#### Resultados Promedios por Clúster (K=5)
 
-| Cluster | Impresiones | Clicks  | CostoxClick | TasaClicks |  Cantidad de elementos |
+| Clúster | Impresiones | Clicks  | CostoxClick | TasaClicks |  Cantidad de elementos |
 |---------|-------------|---------|-------------|------------|------------------------|
 | 0       | 1.92        | 0.03    | 0.0027      | 0.0039     |        13084           |
 | 1       | 13.87       | 1.80    | **0.4804**  | 0.3669     |         535            |
@@ -149,25 +149,35 @@ En ambos casos aparece un cluster con un solo elemento (posible outlier), pero c
 
 **Interpretación**
 
-- **CLUSTER 0:** Tiene muy pocas impresiones, casi sin clicks y baja tasa de clicks este contiene la mayor cantidad de palabras (PALABRAS O FRASES IRRELEVANTES)
-- **CLUSTER 1:** Tiemen mayor costo promedio por click (PALABRAS MÁS CARAS PERO CON UNA TASA DE CLICKS ACEPTABLE)
-- **CLUSTER 2:** Tiene más impresiones y Clicks, pero solo contiene un elemento por eso lo descarto.
-- **CLUSTER 3:** Tiente más tasa de clicks promedio 91% (CONTIENE PALABRAS O FRASES QUE GENERAN ALTA EFICIENCIA)
-- **CLUSTER 4:** Descartando al 2, este es el que tiene más impresiones y Clicks (CONTIENE PALABRAS O FRASES QUE GENERAN ALTA VISIBILIDAD)
+- **CLÚSTER 0:** Tiene muy pocas impresiones, casi sin clicks y baja tasa de clicks este contiene la mayor cantidad de palabras (PALABRAS O FRASES IRRELEVANTES)
+- **CLÚSTER 1:** Tiemen mayor costo promedio por click (PALABRAS MÁS CARAS PERO CON UNA TASA DE CLICKS ACEPTABLE)
+- **CLÚSTER 2:** Tiene más impresiones y Clicks, pero solo contiene un elemento por eso lo descarto.
+- **CLÚSTER 3:** Tiente más tasa de clicks promedio 91% (CONTIENE PALABRAS O FRASES QUE GENERAN ALTA EFICIENCIA)
+- **CLÚSTER 4:** Descartando al 2, este es el que tiene más impresiones y Clicks (CONTIENE PALABRAS O FRASES QUE GENERAN ALTA VISIBILIDAD)
 
 
-#### Visualización en 2D de los Cluster usando PCA
+#### Visualización en 2D de los Clúster usando PCA
 
-Con el fin de mejorar la visualización del gráfico, se excluyó el Cluster 2, ya que representa un outlier que afecta la escala
+Con el fin de mejorar la visualización del gráfico, se excluyó el Clúster 2, ya que representa un outlier que afecta la escala
 
 <p align="center">
 <img src="imagenes/kmeanspca2d.png" width="500">
 </p>
 
-- El Cluster 4 (rosado) se encuentra bastante aislado, lo que indica que sus características son únicas.
--  
+#### Visualización en 2D de los Clúster usando t-SNE
 
+Se utilizó perplexity=30 y learning_rate=200
 
+<p align="center">
+<img src="imagenes/kmeanstsne.png" width="500">
+</p>
 
+**Interpretación de ambas visualizaciones**
+
+- PCA muestra el Clúster 4 (Rosado en PCA) relativamente aislado en la parte superior lo que sugiere que tiene características bastantes distintas al resto de datos
+- A primera vista se observa que t-SNE logra “estirar” y separar los datos en el plano 2D de una forma que facilita la interpretación visual.
+- En ambos gráficos, pero mucho más en el t-SNE se observa una separación clara de los clústeres
+
+  
 ### 5.2.- 🛠️ Implementación de DBSCAN
 
