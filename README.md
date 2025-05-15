@@ -157,4 +157,8 @@ En ambos casos aparece un cluster con un solo elemento (posible outlier), pero c
 
 
 ### 5.2.- 🛠️ Implementación de DBSCAN
+Agrupaciones densas de puntos sin necesidad de conocer cuantos cluster tienen.
 
+Entrenar el modelo
+
+Con eps=0.8 y min_samples=15, el modelo DBSCAN generó clústeres más definidos y menos ruido, mejorando la agrupación de datos relevantes. Comparado con eps=0.6 y min_samples=10, el segundo entrenamiento ofrece mejor estabilidad y segmentación más precisa.
