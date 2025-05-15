@@ -225,4 +225,14 @@ Se utilizó perplexity=30 y learning_rate=200
 
   
 ### 5.2.- 🛠️ Implementación de DBSCAN
+### 5.3.- 🛠️ Implementación de PCA 
+### 5.4.- 🛠️ Implementación de t-SNE 
+
+## 6. Visualización de resultados
+### 6.1.- Gráficos comparativos entre K-means y DBSCAN.
+### 6.2.- Visualizaciones 2D de PCA y t-SNE coloreadas por cluster.
+### 6.3.- Tabla resumen de características medias por cluster.
+
+## 7. Reflexión y comunicación
+
 
